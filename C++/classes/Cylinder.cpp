@@ -1,4 +1,8 @@
 #include "Cylinder.h"
-#include <iostream>
 
-using namespace std;
+const double PI = 3.14159;
+
+double Cylinder::volume()
+{
+    return height * (PI*radius*radius);
+}
