@@ -1,6 +1,21 @@
 #include "Cylinder.h"
+#include <cmath>
 
-const double PI = 3.14159;
+using namespace std;
+
+const double PI = acos(-1);
+
+Cylinder::Cylinder()
+{
+    height = 1;
+    radius = 1;
+}
+
+Cylinder::Cylinder(const double h, const double r)
+{
+    height = h;
+    radius = r;
+}
 
 double Cylinder::volume()
 {
