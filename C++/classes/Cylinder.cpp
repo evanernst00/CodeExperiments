@@ -7,17 +7,43 @@ const double PI = acos(-1);
 
 Cylinder::Cylinder()
 {
-    height = 1;
-    radius = 1;
+    _height = 1;
+    _radius = 1;
 }
 
 Cylinder::Cylinder(const double h, const double r)
 {
-    height = h;
-    radius = r;
+    // Protect against bad initialized values
+    if(h > 0) _height = h;
+    else _height = 1;
+
+    if(r > 0) _radius = r;
+    else _radius = 1;
 }
 
 double Cylinder::volume()
 {
-    return height * (PI*radius*radius);
+    return _height * (PI* _radius * _radius);
+}
+
+double Cylinder::getHeight()
+{
+    return _height;
+}
+
+double Cylinder::getRadius()
+{
+    return _radius;
+}
+
+double Cylinder::setHeight(double h)
+{
+    if(h > 0) _height = h;
+    return _height;
+}
+
+double Cylinder::setRadius(double r)
+{
+    if(r > 0) _radius = r;
+    return _radius;
 }
