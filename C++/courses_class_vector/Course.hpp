@@ -7,12 +7,12 @@ class Course
 {
     private:
         int enrollment;
-        string title;
+        std::string title;
     public:
         Course();
-        Course(string);
-        Course(string, int);
-        string getTitle();
+        Course(std::string);
+        Course(std::string, int);
+        std::string getTitle();
         int getEnrollment();
         void registerStudent();
         void withdrawStudent();
