@@ -3,7 +3,7 @@
 # THE NAME OF YOUR EXECUTABLE
 TARGET = courses
 # ALL CPP COMPILABLE IMPLEMENTATION FILES THAT MAKE UP THE PROJECT
-SRC_FILES = main.cpp
+SRC_FILES = main.cpp Course.cpp
 
 # NO EDITS NEEDED BELOW THIS LINE
 
@@ -34,4 +34,5 @@ clean:
 .PHONY: all clean
 
 # DEPENDENCIES
-main.o: main.cpp
+main.o: main.cpp Course.hpp
+Course.o: Course.cpp Course.hpp
